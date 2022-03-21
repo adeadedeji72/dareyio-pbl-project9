@@ -96,7 +96,7 @@ If you encounter an error about the webhook not reachable, **allow ICMP traffic 
 Click "Configure" your job/project and add these two configurations
 Configure triggering the job from GitHub webhook:
 
-![](jenkins-trigger.png)
+![](jenkins_trigger.png)
 
-![](archive-artifacts.gif)
+![](archive_artifacts.gif)
 

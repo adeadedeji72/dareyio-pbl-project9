@@ -67,4 +67,36 @@ Once plugins installation is done – create an admin user and you will get your
 
 The installation is completed!
 
+![](jenkins-ready.jpg)
+
+### **Step 2** – Configure Jenkins to retrieve source codes from GitHub using Webhooks ###
+
+In this part, you will learn how to configure a simple Jenkins job/project (these two terms can be used interchangeably). This job will will be triggered by GitHub webhooks and will execute a ‘build’ task to retrieve codes from GitHub and store it locally on Jenkins server.
+
+1. Enable Webhook in the Github settings
+
+![](webhook-setting.gif)
+
+If you encounter an error about the webhook not reachable, **allow ICMP traffic on Inbound traffic on the Jenkins EC2 instance.**
+
+2. Go to Jenkins web console, click "New Item" and create a "Freestyle project"
+
+![](new-jenkins-prj.jpg)
+
+3. To connect your GitHub repository, you will need to provide its URL, copy from the repository itself.
+
+4. In configuration of your Jenkins freestyle project choose Git repository, provide there the link to your Tooling GitHub repository and credentials (user/password) so Jenkins could access files in the repository.
+
+![](jenkins-repo-login.jpg)
+
+5. Click "Build Now" button, if you have configured everything correctly, the build will be successfull and you will see it under
+
+![](manual-build.jpg)
+
+Click "Configure" your job/project and add these two configurations
+Configure triggering the job from GitHub webhook:
+
+![](jenkins-trigger.png)
+
+![](archive-artifacts.gif)
 

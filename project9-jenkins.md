@@ -59,5 +59,12 @@ Copy and paste to the browser
 
 ![](jenkins-loggedin.jpg)
 
+Select **Install Suggested Plugins**
+
+Once plugins installation is done – create an admin user and you will get your Jenkins server address.
+
+![](jenkins-admin.jpg)
+
+The installation is completed!
 
 

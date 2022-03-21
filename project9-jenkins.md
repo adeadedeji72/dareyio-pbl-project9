@@ -144,8 +144,23 @@ Test the configuration and make sure the connection returns Success. Remember, t
 
 Save the configuration, open your Jenkins job/project configuration page and add another one "Post-build Action"
 
-![](![image](build-over-ssh.jpg)
+![image](build-over-ssh.jpg)
 
-![](bos-source-file.ssh)
+![](bos-source-file.jpg)
 
+Save this configuration and go ahead, change something in README.MD file in your GitHub Tooling repository.
 
+Webhook will trigger a new job and in the "Console Output" of the job you will find something like this:
+
+![](console-output.jpg)
+
+If you are getting error about **'permission denied'** in the Console Output, check and set to ownership and permissions on the /mnt directory as
+~~~
+sudo chown nobody:nobody /mnt
+sudo chmod -R 777 /mnt
+~~~
+To make sure that the files in /mnt/apps have been udated – connect via SSH/Putty to your NFS server and check README.MD file
+~~~
+cat /mnt/apps/README.md
+~~~
+If you see the changes you had previously made in your GitHub – the job works as expected.

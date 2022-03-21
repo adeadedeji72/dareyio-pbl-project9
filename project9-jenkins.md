@@ -57,6 +57,7 @@ Copy and paste to the browser
 
 ![](jenkins-initialpass.jpg)
 
-![](jenkins-loggedin .jpg)
+![](jenkins-loggedin.jpg)
+
 
 

@@ -41,3 +41,20 @@ sudo systemctl status jenkins
 Open port 8080 for Jenkins in the Inbound rule for the Instance
 
 ![](open-8080.jpg)
+
+Access the newly installed Jenkins from
+~~~
+http://<Jenkins-Server-Public-IP-Address-or-Public-DNS-Name>:8080
+~~~
+
+Obtain the required password form
+~~~
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+~~~
+Copy and paste to the browser
+
+![](jenkins-login.jpg)
+
+![](jenkins-initialpass.jpg)
+
+![](jenkins-loggedin.jpg)
